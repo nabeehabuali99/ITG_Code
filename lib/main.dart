@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 
+import 'Furniture App/Cart App.dart';
+import 'Furniture App/HomeScreen.dart';
+import 'Furniture App/ShowItems.dart';
+import 'Furniture App/profile App.dart';
 import 'Home Page/Cards.dart';
 import 'Home Page/Carousel Page.dart';
 import 'Home Page/Food/Cake Cataloge.dart';
@@ -20,9 +24,18 @@ class MyApp extends StatelessWidget {
     return   MaterialApp(
       debugShowCheckedModeBanner: false,
       routes: <String, WidgetBuilder>{
-        '/signup': (BuildContext context) =>  const SignupPage()
+        '/signup': (BuildContext context) =>  const SignupPage(),
+        '/profile': (BuildContext context) =>  const UsersProfile(),
+        '/logout': (BuildContext context) =>  const  SignIn(),
+        '/ToCart': (BuildContext context) =>  CardsUI(),
+        '/ProfileFurniture': (BuildContext context) =>  const ProfileApp(),
+        '/HomeScreenApp': (BuildContext context) =>  const HomeScreen(),
+        '/travel': (BuildContext context) =>  const TravelHome(),
+        '/food': (BuildContext context) =>  const FoodRecipesPage(),
+        '/home': (BuildContext context) =>  const MyHomePage(),
+        '/ShowItemInfo': (BuildContext context) =>  const ShowItemInfo(),
       },
-      home:  CakeCataloge(),    //    SignIn()  ||   MyHomePage()  || UsersProfile() || CardsUI() || TravelHome() ||FoodRecipesPage()
+      home:  const CartApp(),    //    SignIn()  ||   MyHomePage()  || UsersProfile() || CardsUI() || TravelHome() ||FoodRecipesPage() ||CakeCataloge() || HomeScreen ||ProfileApp ||CartApp()
     );
   }
 }
