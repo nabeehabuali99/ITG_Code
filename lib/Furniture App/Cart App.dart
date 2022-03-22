@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 
-
 class CartApp extends StatefulWidget {
   const CartApp({Key? key}) : super(key: key);
 
@@ -13,7 +12,6 @@ class _CartAppState extends State<CartApp> {
   List picked = [false, false];
 
   int totalAmount = 0;
-
   pickToggle(index) {
     setState(() {
       picked[index] = !picked[index];
@@ -32,9 +30,7 @@ class _CartAppState extends State<CartApp> {
           totalAmount = 248 * count;
         });
       }
-    }
-  }
-
+    }}
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -78,7 +74,9 @@ class _CartAppState extends State<CartApp> {
                 child: IconButton(
                     alignment: Alignment.topLeft,
                     icon: const Icon(Icons.arrow_back),
-                    onPressed: () {}),
+                    onPressed: () {
+                      Navigator.of(context).pop();
+                    }),
               ),
               const Positioned(
                   top: 75.0,
@@ -146,54 +144,10 @@ class _CartAppState extends State<CartApp> {
                 child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      InkWell(
-                        onTap: () {},
-                        child: Container(
-                          height: 50.0,
-                          width: 50.0,
-                          color: Colors.white,
-                          child: const Icon(
-                            Icons.shopping_basket,
-                            color: Colors.grey,
-                          ),
-                        ),
-                      ),
-                      InkWell(
-                        onTap: () {},
-                        child: Container(
-                          height: 50.0,
-                          width: 50.0,
-                          color: Colors.white,
-                          child: const Icon(
-                            Icons.account_box,
-                            color: Colors.grey,
-                          ),
-                        ),
-                      ),
-                      InkWell(
-                        onTap: () {},
-                        child: Container(
-                          height: 50.0,
-                          width: 50.0,
-                          color: Colors.white,
-                          child: const Icon(
-                            Icons.shopping_cart,
-                            color: Colors.yellow,
-                          ),
-                        ),
-                      ),
-                      InkWell(
-                        onTap: () {},
-                        child: Container(
-                          height: 50.0,
-                          width: 50.0,
-                          color: Colors.white,
-                          child: const Icon(
-                            Icons.account_box,
-                            color: Colors.grey,
-                          ),
-                        ),
-                      ),
+                      BottomNavigator((){Navigator.of(context).pushNamed('/HomeScreenApp');},Colors.grey,Icons.shopping_basket  ),
+                      BottomNavigator((){Navigator.of(context).pushNamed('/ProfileFurniture');},Colors.grey,Icons.account_box ),
+                      BottomNavigator((){Navigator.of(context).pushNamed('/CartFurniture');},Colors.yellow,Icons.shopping_cart ),
+                      BottomNavigator((){Navigator.of(context).pushNamed('/ProfileFurniture');},Colors.grey,Icons.account_box ),
                     ]),
               ))),
     );
@@ -328,4 +282,21 @@ class _CartAppState extends State<CartApp> {
                   )))),
     );
   }
+
+  Widget BottomNavigator(Function() onTap,Color iconColor,IconData icon ){
+    return InkWell(
+      onTap:  onTap,
+      child: Container(
+        height: 50.0,
+        width: 50.0,
+        color: Colors.white,
+        child:   Icon(
+          icon,
+          color: iconColor,
+        ),
+      ),
+    );
+  }
+
 }
+

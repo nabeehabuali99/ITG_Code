@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'Clean Design/HomeScreen.dart';
 import 'Furniture App/Cart App.dart';
 import 'Furniture App/HomeScreen.dart';
 import 'Furniture App/ShowItems.dart';
@@ -34,8 +35,9 @@ class MyApp extends StatelessWidget {
         '/food': (BuildContext context) =>  const FoodRecipesPage(),
         '/home': (BuildContext context) =>  const MyHomePage(),
         '/ShowItemInfo': (BuildContext context) =>  const ShowItemInfo(),
+        '/CartFurniture': (BuildContext context) =>    CartApp(),
       },
-      home:  const CartApp(),    //    SignIn()  ||   MyHomePage()  || UsersProfile() || CardsUI() || TravelHome() ||FoodRecipesPage() ||CakeCataloge() || HomeScreen ||ProfileApp ||CartApp()
+      home:  const HomeScreenClean(),    //    SignIn()  ||   MyHomePage()  || UsersProfile() || CardsUI() || TravelHome() ||FoodRecipesPage() ||CakeCataloge() || HomeScreen ||ProfileApp
     );
   }
 }

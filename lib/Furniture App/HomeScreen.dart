@@ -89,21 +89,21 @@ class _HomeScreenPageState extends State<HomeScreen>
                               ),
                             ),
                             onTap: () {
-                              Navigator.of(context).pushNamed('/ProfileFurniture');
+                              Navigator.of(context)
+                                  .pushNamed('/ProfileFurniture');
                             },
                           ),
                           SizedBox(
-                              width: MediaQuery
-                                  .of(context)
-                                  .size
-                                  .width - 120.0),
+                              width: MediaQuery.of(context).size.width - 120.0),
                           Container(
                             alignment: Alignment.topRight,
                             child: IconButton(
                               icon: const Icon(Icons.menu),
                               onPressed: () {
-                                Navigator.push(context, MaterialPageRoute(
-                                    builder: (context) => CakeCataloge()));
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => CakeCataloge()));
                               },
                               color: Colors.white,
                               iconSize: 30.0,
@@ -146,7 +146,7 @@ class _HomeScreenPageState extends State<HomeScreen>
                                   prefixIcon: Icon(Icons.search,
                                       color: Color(0xFFFEDF62), size: 30.0),
                                   contentPadding:
-                                  EdgeInsets.only(left: 15.0, top: 15.0),
+                                      EdgeInsets.only(left: 15.0, top: 15.0),
                                   hintText: 'Search',
                                   hintStyle: TextStyle(
                                       color: Colors.grey,
@@ -168,26 +168,25 @@ class _HomeScreenPageState extends State<HomeScreen>
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: const <Widget>[
-
                       ContainerItem(
                           ImageName: 'assets/sofas.png', nameOfItems: 'Sofas'),
-                      ContainerItem(ImageName: 'assets/wardrobe.png',
+                      ContainerItem(
+                          ImageName: 'assets/wardrobe.png',
                           nameOfItems: 'Wardrobe'),
                       ContainerItem(
                           ImageName: 'assets/dresser.png', nameOfItems: 'Desk'),
-                      ContainerItem(ImageName: 'assets/ottomn.png',
+                      ContainerItem(
+                          ImageName: 'assets/ottomn.png',
                           nameOfItems: 'Dresser'),
-
                     ],
                   )
                 ],
               ),
-                const itemCard(title: 'FinnNavian1',
-                  imgPath: 'assets/ottomn.png' ),
-                const itemCard(title: 'FinnNavian2',
-                  imgPath: 'assets/anotherchair.png'),
-                const itemCard(title: 'FinnNavian3',
-                  imgPath: 'assets/chair.png' )
+              const itemCard(
+                  title: 'FinnNavian1', imgPath: 'assets/ottomn.png'),
+              const itemCard(
+                  title: 'FinnNavian2', imgPath: 'assets/anotherchair.png'),
+              const itemCard(title: 'FinnNavian3', imgPath: 'assets/chair.png')
             ],
           )
         ],
@@ -200,10 +199,20 @@ class _HomeScreenPageState extends State<HomeScreen>
           tabs: <Widget>[
             const Tab(icon: Icon(Icons.event_seat, color: Colors.yellow)),
             const Tab(icon: Icon(Icons.timer, color: Colors.grey)),
-            const Tab(icon: Icon(Icons.shopping_cart, color: Colors.grey)),
-            Tab(child: IconButton(onPressed: () {
-              Navigator.of(context).pushNamed('/ProfileFurniture');
-            }, icon: const Icon(Icons.person_outline, color: Colors.grey)))
+            Tab(
+              child: IconButton(
+                onPressed: () {
+                  Navigator.of(context).pushNamed('/CartFurniture');
+                },
+                icon: const Icon(Icons.shopping_cart, color: Colors.grey),
+              ),
+            ),
+            Tab(
+                child: IconButton(
+                    onPressed: () {
+                      Navigator.of(context).pushNamed('/ProfileFurniture');
+                    },
+                    icon: const Icon(Icons.person_outline, color: Colors.grey)))
           ],
         ),
       ),

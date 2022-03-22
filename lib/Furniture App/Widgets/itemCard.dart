@@ -121,7 +121,7 @@ class itemCard extends StatefulWidget {
                         child:   Center(
                           child: InkWell(
                             onTap: (){
-                              Navigator.of(context).pushNamed('/ToCart');
+                              Navigator.of(context).pushNamed('/CartFurniture');
                             }
                             ,
                             child: const Text(
