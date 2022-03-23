@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:test_itg_code/Furniture App/HomeScreen.dart';
+import 'package:test_itg_code/Constants/Routes.dart' as route;
 
 class itemCard extends StatefulWidget {
 
@@ -23,7 +25,7 @@ class itemCard extends StatefulWidget {
         onTap: (){
 
           if( widget.title =='FinnNavian1'){
-            Navigator.of(context).pushNamed('/ShowItemInfo');
+            Navigator.of(context).pushNamed(route.showItemInfo);
           }
         },
         child: Container(
@@ -121,7 +123,7 @@ class itemCard extends StatefulWidget {
                         child:   Center(
                           child: InkWell(
                             onTap: (){
-                              Navigator.of(context).pushNamed('/CartFurniture');
+                              Navigator.of(context).pushNamed(route.cartFurniture);
                             }
                             ,
                             child: const Text(

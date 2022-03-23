@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'Widgets/CardDetailProfile.dart';
 import 'Widgets/ListItemProfile.dart';
-
+import 'package:test_itg_code/Constants/Routes.dart' as route;
 
 
 class ProfileApp extends StatefulWidget {
@@ -75,7 +75,7 @@ int value =5;
                     const SizedBox(width: 15.0),
                     InkWell(
                       onTap: (){
-                        Navigator.of(context).pushNamed('/profile');
+                        Navigator.of(context).pushNamed(route.profile);
                       },
                       child: Hero(
                         tag: 'assets/chris.png',
@@ -120,7 +120,7 @@ int value =5;
                       child: IconButton(
                         icon: const Icon(Icons.settings),
                         onPressed: () {
-                          Navigator.of(context).pushNamed('/profile');
+                          Navigator.of(context).pushNamed(route.profile);
                         },
                         color: Colors.white,
                         iconSize: 30.0,
@@ -140,7 +140,7 @@ int value =5;
                           color: Colors.white,
                           iconSize: 40.0,
                           onPressed: () {
-                            Navigator.of(context).pushNamed('/travel');
+                            Navigator.of(context).pushNamed(route.travel);
                           },
                         ),
                         const Text(
@@ -160,7 +160,7 @@ int value =5;
                           color: Colors.white,
                           iconSize: 40.0,
                           onPressed: () {
-                            Navigator.of(context).pushNamed('/ToCart');
+                            Navigator.of(context).pushNamed(route.toCart);
 
                           },
                         ),
@@ -180,7 +180,7 @@ int value =5;
                           icon: const Icon(Icons.print),
                           color: Colors.white,
                           iconSize: 40.0,
-                          onPressed: () { Navigator.of(context).pushNamed('/ToCart');},
+                          onPressed: () { Navigator.of(context).pushNamed(route.toCart);},
                         ),
                         const Text(
                           'Footprint',
@@ -199,7 +199,7 @@ int value =5;
                             icon: const Icon(Icons.computer),
                             color: Colors.white,
                             iconSize: 40.0,
-                            onPressed: () {Navigator.of(context).pushNamed('/food');},
+                            onPressed: () {Navigator.of(context).pushNamed(route.food);},
                           ),
                           const Text(
                             'Coupon',
@@ -260,7 +260,7 @@ int value =5;
           indicatorColor: Colors.yellow,
           tabs:   <Widget>[
             Tab(child:IconButton(icon: const Icon(Icons.event_seat, color: Colors.grey), onPressed: () {
-              Navigator.of(context).pushNamed('/HomeScreenApp');
+              Navigator.of(context).pushNamed(route.homeScreenApp);
             },),),
             const Tab(icon: Icon(Icons.timer, color: Colors.grey)),
             const Tab(icon: Icon(Icons.shopping_cart, color: Colors.grey)),

@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../Home Page/Food/Cake Cataloge.dart';
 import 'Widgets/ContainerItem.dart';
 import 'Widgets/itemCard.dart';
-
+import 'package:test_itg_code/Constants/Routes.dart' as route;
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
@@ -89,8 +88,7 @@ class _HomeScreenPageState extends State<HomeScreen>
                               ),
                             ),
                             onTap: () {
-                              Navigator.of(context)
-                                  .pushNamed('/ProfileFurniture');
+                              Navigator.pushNamed(context,route.profileFurniture);
                             },
                           ),
                           SizedBox(
@@ -100,10 +98,9 @@ class _HomeScreenPageState extends State<HomeScreen>
                             child: IconButton(
                               icon: const Icon(Icons.menu),
                               onPressed: () {
-                                Navigator.push(
+                                Navigator.pushNamed(
                                     context,
-                                    MaterialPageRoute(
-                                        builder: (context) => CakeCataloge()));
+                                    route.cakeCataloge);
                               },
                               color: Colors.white,
                               iconSize: 30.0,
@@ -202,7 +199,7 @@ class _HomeScreenPageState extends State<HomeScreen>
             Tab(
               child: IconButton(
                 onPressed: () {
-                  Navigator.of(context).pushNamed('/CartFurniture');
+                  Navigator.of(context).pushNamed(route.cartFurniture);
                 },
                 icon: const Icon(Icons.shopping_cart, color: Colors.grey),
               ),
@@ -210,7 +207,7 @@ class _HomeScreenPageState extends State<HomeScreen>
             Tab(
                 child: IconButton(
                     onPressed: () {
-                      Navigator.of(context).pushNamed('/ProfileFurniture');
+                      Navigator.of(context).pushNamed(route.profileFurniture);
                     },
                     icon: const Icon(Icons.person_outline, color: Colors.grey)))
           ],

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:test_itg_code/Constants/Routes.dart' as route;
 
 
 class UsersProfile extends StatefulWidget {
@@ -92,7 +93,7 @@ class _UsersProfileState extends State<UsersProfile> {
                           elevation: 7.0,
                           child: GestureDetector(
                             onTap: () {
-                              Navigator.of(context).pushNamed('/logout');
+                              Navigator.of(context).pushNamed(route.logout);
                             },
                             child: const Center(
                               child: Text(

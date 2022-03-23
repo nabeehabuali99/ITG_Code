@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:test_itg_code/Constants/Routes.dart' as route;
 
 class ListItem extends StatefulWidget {
   final String imgPath;
@@ -18,7 +19,7 @@ class _ListItemState extends State<ListItem> {
     return InkWell(
       onTap: (){
         if(widget.name == 'Chris'){
-          Navigator.of(context).pushNamed('/profile');
+          Navigator.of(context).pushNamed(route.profile);
         }
       },
       child: Column(

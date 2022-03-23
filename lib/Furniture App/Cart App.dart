@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:test_itg_code/Constants/Routes.dart' as route;
 
 
 class CartApp extends StatefulWidget {
@@ -144,10 +145,10 @@ class _CartAppState extends State<CartApp> {
                 child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      BottomNavigator((){Navigator.of(context).pushNamed('/HomeScreenApp');},Colors.grey,Icons.shopping_basket  ),
-                      BottomNavigator((){Navigator.of(context).pushNamed('/ProfileFurniture');},Colors.grey,Icons.account_box ),
-                      BottomNavigator((){Navigator.of(context).pushNamed('/CartFurniture');},Colors.yellow,Icons.shopping_cart ),
-                      BottomNavigator((){Navigator.of(context).pushNamed('/ProfileFurniture');},Colors.grey,Icons.account_box ),
+                      BottomNavigator((){Navigator.of(context).pushNamed(route.homeScreenApp);},Colors.grey,Icons.shopping_basket  ),
+                      BottomNavigator((){Navigator.of(context).pushNamed(route.profileFurniture);},Colors.grey,Icons.account_box ),
+                      BottomNavigator((){Navigator.of(context).pushNamed(route.cartFurniture);},Colors.yellow,Icons.shopping_cart ),
+                      BottomNavigator((){Navigator.of(context).pushNamed(route.profileFurniture);},Colors.grey,Icons.account_box ),
                     ]),
               ))),
     );

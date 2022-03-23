@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+ import 'package:test_itg_code/Constants/Routes.dart' as route;
 
 class SignIn extends StatefulWidget {
   const SignIn({Key? key}) : super(key: key);
@@ -197,7 +198,7 @@ class _SignInState extends State<SignIn> with SingleTickerProviderStateMixin {
                     const SizedBox(width: 5.0),
                     InkWell(
                       onTap: () {
-                        Navigator.of(context).pushNamed('/signup');
+                        Navigator.of(context).pushNamed(route.signUp);
                       },
                       child: const Text(
                         'Register',

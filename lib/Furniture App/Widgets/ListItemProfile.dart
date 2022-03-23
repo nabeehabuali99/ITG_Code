@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:test_itg_code/Constants/Routes.dart' as route;
 
 class ListItemProfile extends StatefulWidget {
 
@@ -18,18 +19,18 @@ class _ListItemProfileState extends State<ListItemProfile> {
       onTap: (){
         if(widget.title =='Gift card')
           {
-            Navigator.of(context).pushNamed('/travel');
+            Navigator.of(context).pushNamed(route.travel);
           }
         else if(widget.title =='Bank card'){
-          Navigator.of(context).pushNamed('/food');
+          Navigator.of(context).pushNamed(route.food);
         }
         else if(widget.title =='Replacement code'){
-          Navigator.of(context).pushNamed('/food');
+          Navigator.of(context).pushNamed(route.food);
         }  else if(widget.title =='Consulting collection'){
-          Navigator.of(context).pushNamed('/home');
+          Navigator.of(context).pushNamed(route.home);
         }
        else if(widget.title =='Customer service'){
-      Navigator.of(context).pushNamed('/home');
+      Navigator.of(context).pushNamed(route.home);
     }else{
           const Text('Error Message',style: TextStyle(color: Colors.red),);
         }

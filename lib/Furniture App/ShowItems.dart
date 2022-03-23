@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:test_itg_code/Furniture%20App/Widgets/itemCard.dart';
+import 'package:test_itg_code/Constants/Routes.dart' as route;
 
 import '../Home Page/Carousel Page.dart';
 
@@ -109,11 +111,7 @@ class _ShowItemInfoState extends State<ShowItemInfo>with SingleTickerProviderSta
                               child: InkWell(
                                 onTap: () {
                                   setState(() {
-                                    if (isFavorite1 == true) {
                                       isFavorite1 = !isFavorite1;
-                                    } else {
-                                      isFavorite1 = !isFavorite1;
-                                    }
                                   });
                                 },
                                 child: isFavorite1
@@ -316,7 +314,7 @@ class _ShowItemInfoState extends State<ShowItemInfo>with SingleTickerProviderSta
                     const SizedBox(width: 10.0),
                     InkWell(
                       onTap: () {
-                        Navigator.of(context).pushNamed('/food');
+                        Navigator.of(context).pushNamed(route.food);
                       },
                       child: Container(
                         height: 50.0,
@@ -330,7 +328,7 @@ class _ShowItemInfoState extends State<ShowItemInfo>with SingleTickerProviderSta
                     ),
                     InkWell(
                       onTap: () {
-                        Navigator.of(context).pushNamed('/ProfileFurniture');
+                        Navigator.of(context).pushNamed(route.profileFurniture);
                       },
                       child: Container(
                         height: 50.0,
@@ -344,7 +342,7 @@ class _ShowItemInfoState extends State<ShowItemInfo>with SingleTickerProviderSta
                     ),
                     InkWell(
                       onTap: () {
-                        Navigator.of(context).pushNamed('/ToCart');
+                        Navigator.of(context).pushNamed(route.toCart);
                       },
                       child: Container(
                           color: const Color(0xFFFEDD59),
